@@ -1,34 +1,53 @@
-AWS VPC Networking Lab
+# AWS VPC Networking Lab
 
-Project Overview
-This repository documents my hands-on learning and practice with Amazon Web Services (AWS) networking fundamentals, focusing on Amazon Virtual Private Cloud (VPC).
+## Project Overview
 
-Objectives
-- Understand AWS VPC architecture and IP addressing.
-- Learn how subnets organize cloud resources.
-- Explore route tables and Internet Gateway configuration.
-- Understand security groups and Network ACLs.
-- Document configuration steps and troubleshooting lessons.
+This project documents my hands-on practice configuring networking components in Amazon Web Services (AWS). It focuses on Amazon Virtual Private Cloud (VPC), subnet configuration, routing, internet connectivity, and network access.
 
-AWS Services and Concepts
+## Objectives
+
+- Create and inspect an AWS VPC.
+- Configure two subnets within the VPC.
+- Attach an Internet Gateway.
+- Configure a route table with a default route to the Internet Gateway.
+- Associate subnets with a route table.
+- Explore EC2 connectivity and SSH access.
+
+## AWS Services and Concepts
+
 - Amazon VPC
 - Subnets
-- Route tables
 - Internet Gateway
+- Route tables and subnet associations
 - Security groups
-- Network ACLs
+- Amazon EC2 and SSH connectivity
 
-Implementation
-I will document the resources configured, the steps followed, and the connectivity tests performed during this lab.
+## Architecture and Configuration
 
-Evidence and Results
-Screenshots, configuration details, and test results will be added as the lab progresses. Sensitive information will be excluded.
+The lab included a VPC named `MyGroupVPC`, two subnets, an Internet Gateway named `MyInternetGateway`, and a route table named `PublicRouteTable`.
 
-Challenges and Lessons Learned
-This section will capture networking issues encountered, troubleshooting steps, and lessons learned.
+The documented default route was `0.0.0.0/0` pointing to the Internet Gateway. This route provides a path toward the internet; actual internet connectivity also depends on subnet routing, public IP addressing, security rules, and other configuration requirements.
 
-Cleanup
-AWS resources will be reviewed and deleted when no longer needed to avoid unnecessary charges.
+## Evidence
 
-Project Status
-In progress — documenting AWS networking fundamentals and lab implementation.
+Screenshots documenting the lab are available in the [`screenshots/`](screenshots/) directory.
+
+The evidence covers VPC creation, subnet configuration, Internet Gateway attachment, route table configuration, subnet associations, and EC2 SSH connectivity.
+
+## Key Learning Outcomes
+
+- Understanding how VPCs and subnets organize AWS network resources.
+- Learning how route tables direct traffic.
+- Understanding the role of an Internet Gateway in internet routing.
+- Recognizing how network routes and security controls work together.
+- Practising technical documentation and evidence-based troubleshooting.
+
+## Security and Cost Management
+
+AWS resources used for the exercise have been cleaned up after the lab.
+
+Screenshots should be reviewed to ensure they do not expose credentials, private keys, or sensitive account information.
+
+## Project Status
+
+Completed learning exercise. This repository documents the configuration and concepts practised during the lab.
