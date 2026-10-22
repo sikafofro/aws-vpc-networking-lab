@@ -51,3 +51,24 @@ Screenshots should be reviewed to ensure they do not expose credentials, private
 ## Project Status
 
 Completed learning exercise. This repository documents the configuration and concepts practised during the lab.
+
+## Network Architecture
+
+The following conceptual diagram illustrates the main networking components explored in this lab.
+
+```mermaid
+flowchart TB
+    Internet((Internet))
+    IGW[Internet Gateway]
+    subgraph VPC["MyGroupVPC"]
+        RT["PublicRouteTable<br/>Default route: 0.0.0.0/0"]
+        S1["Subnet 1"]
+        S2["Subnet 2"]
+        RT --- S1
+        RT --- S2
+    end
+    Internet --- IGW
+    IGW --- RT
+```
+
+*Note: This is a conceptual diagram. Refer to the configuration screenshots in the `screenshots/` directory for the actual resource settings and subnet associations.*
